@@ -445,38 +445,45 @@
         <h2 class="section__title">Recent Works</h2>
 
         <div class="work__filters">
-          <span class="work__item">All</span>
-          <span class="work__item">HTML/CSS</span>
-          <span class="work__item">REACT</span>
-          <span class="work__item">FLASK</span>
+          <span class="work__item active-work" data-filter='all'>All</span>
+          <span class="work__item" data-filter='.html'>HTML/CSS</span>
+          <span class="work__item" data-filter='.react'>REACT</span>
+          <span class="work__item" data-filter='.flask'>FLASK</span>
         </div>
 
         <div class="work__container container grid">
-            <div class="work__card">
+            <div class="work__card mix react">
               <img src="assets/img/travel.png" alt="" class="work__img">
 
               <h3 class="work__title">Travel Website(API Integration,MAPS,TailwindCSS)</h3>
               <a href="#" class="work__button">Demo <i class="bx bx-right-arrow-alt work__icon"></i></a>
             </div>
 
-            <div class="work__card">
+            <div class="work__card mix html">
               <img src="assets/img/amazon.png" alt="" class="work__img">
 
               <h3 class="work__title">Online Store(API Integration, nextauth,TailwindCSS)</h3>
               <a href="#" class="work__button">Demo <i class="bx bx-right-arrow-alt work__icon"></i></a>
             </div>
 
-            <div class="work__card">
+            <div class="work__card mix react">
               <img src="assets/img/netflix.png" alt="" class="work__img">
 
               <h3 class="work__title">NETFLIX CLONE(Firebase Authentication, API Integration)</h3>
               <a href="#" class="work__button">Demo <i class="bx bx-right-arrow-alt work__icon"></i></a>
             </div>
 
-            <div class="work__card">
+            <div class="work__card mix react">
               <img src="assets/img/auto.png" alt="" class="work__img">
 
               <h3 class="work__title">AUTOSHOP SITE(Redux, Styled Components)</h3>
+              <a href="#" class="work__button">Demo <i class="bx bx-right-arrow-alt work__icon"></i></a>
+            </div>
+
+            <div class="work__card mix flask">
+              <img src="assets/img/html.png" alt="" class="work__img">
+
+              <h3 class="work__title">Portfolio Website(Javascript)</h3>
               <a href="#" class="work__button">Demo <i class="bx bx-right-arrow-alt work__icon"></i></a>
             </div>
         </div>
@@ -499,7 +506,7 @@
     <script src=""></script>
 
     <!--=============== MIXITUP FILTER ===============-->
-    <script src=""></script>
+    <script src="assets/js/mixitup.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
