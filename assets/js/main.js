@@ -29,25 +29,36 @@ modalClose.forEach((mc) =>{
         })
     })
 })
+
+
+
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
-let mixer = mixitup('work__container', {
-    selectors: {
-        target: '.work__card'
-    },
-    animation: {
-        duration: 300
-    }
-});
+let workItem=document.querySelectorAll('.work__item');
+let workCard=document.querySelectorAll('.work__card');
 
-/* Link active work */ 
-const linkWork = document.querySelectorAll('.work__item')
+for(let i=0; i<workItem.length; i++){
+    workItem[i].addEventListener('click',function(){
+        for(let j=0; j<workItem.length; j++){
+            workItem[j].classList.remove('active');
+        }
+        this.classList.add('active');
 
-function activeWork(){
-    linkWork.forEach(l=> l.classList.remove('active-work'))
-    this.classList.add('active-work')
+        let dataFilter = this.getAttribute('data-filter');
+
+        for (let k=0; k<workCard.length; k++){
+                 itemBox[k].classList.remove('active');
+                 itemBox[k].classList.add('hide');
+
+        if(itemBox[k].getAttribute('data-item') == dataFilter || dataFilter == 'all'){
+                 itemBox[k].classList.remove('hide');
+                 itemBox[k].classList.add('active');
+        }
+        }
+    })
 }
 
-linkWork.forEach(l=> l.addEventListener('click', activeWork))
+/* Link active work */ 
+
 /*=============== SWIPER TESTIMONIAL ===============*/
 
 
