@@ -17,12 +17,12 @@
   --sat: 66%;
   --lig: 75%;
   --second-hue: 219;
-  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+  --first-color: hsla(192, 100%, 39%, 1);
   --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
-  --body-color: hsl(var(--second-hue), 48%, 8%);
+  --body-color: hsla(211, 100%, 2%, 1);
   --container-color: hsl(var(--second-hue), 32%, 12%);
 
   /*========== Font and typography ==========*/
@@ -172,6 +172,10 @@ body.light-theme{
 .light-theme .contact__card {
   box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, .1);
 }
+.light-theme .work__card{
+ background-color: #ffffff;
+ background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
 
 .light-theme::-webkit-scrollbar{
   background-color: hsla(var(--second-hue), 8%, 66%);
@@ -250,7 +254,8 @@ body.light-theme{
 .nav__menu{
   position:fixed;
   bottom:1rem;
-  background-color: hsla(var(--second-hue), 32%, 16%, .8);
+  background-color: #00bfb2;
+  background-image: linear-gradient(315deg, #00bfb2 0%, #028090 74%);
   width:90%;
   border-radius: .3rem;
   padding: 1rem 2.5rem;
@@ -319,14 +324,16 @@ body.light-theme{
 }
 
 .home__img{
-  width:140px;
+  width:180px;
+  height: 350px;
 }
 
 .home__handle{
   justify-self: center;
-  width:200px;
-  height:283px;
-  background: transparent;
+  width:180px;
+  height:253px;
+  background-color: #4c4177;
+  background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
   border-radius: .2rem .2rem .2rem .2rem;
   display: flex;
   align-items: flex-end;
@@ -421,8 +428,7 @@ body.light-theme{
   width:220px;
   border-radius: .5rem;
   justify-self: center;
-  background-color: #000000;
-  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  
 }
 .about__data{
   text-align: center;
@@ -623,8 +629,8 @@ body.light-theme{
 }
 
 .work__card{
-  background-color: #5d4257;
-  background-image: linear-gradient(315deg, #5d4257 0%, #a5c7b7 74%);
+  background-color: #537895;
+  background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
   padding: 1rem;
   border-radius: .3rem;
 }
@@ -774,7 +780,8 @@ body.light-theme{
 }
 /*=============== FOOTER ===============*/
 .footer{
-  background-color: var(--first-color);
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
 }
 .footer__container{
   padding:2rem 0 6rem;
@@ -782,11 +789,12 @@ body.light-theme{
 
 .footer__title,
 .footer__link{
-  color: var(--body-color);
+  color: white;
 }
 
-.font__title{
+.footer__title{
   text-align: center;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 .footer__list{
@@ -845,7 +853,7 @@ body.light-theme{
     height:253px;
   }
   .home__img{
-    width:130px;
+    width:80px;
   }
 
   .about__info{
@@ -931,3 +939,103 @@ body.light-theme{
   }
 }
 /* For large devices */
+@media screen  and (min-width:992px){
+  .container{
+    margin-left:auto;
+    margin-right: auto;
+  }
+  .section{
+    padding: 6.5rem 0 1rem;
+  }
+  .services__title{
+    margin-bottom: 3.5rem;
+  }
+
+  .nav{
+    height:calc(var(--header-height) + 1rem);
+  }
+
+  .home__handle{
+    width:290px;
+    height:400px;
+  }
+
+  .home__img{
+    width: 200px;
+  }
+
+  .home__social-link{
+    padding: .4rem;
+    font-size: 1.25rem;
+  }
+
+  .home__social::after{
+    transform: rotate(90deg) translate(16px, 0);
+  }
+
+  .home__scroll-icon{
+    font-size: 2rem;
+  }
+
+  .about__container{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    column-gap: 4rem;
+  }
+  .about__img{
+    width: 350px;
+  }
+  .about__info{
+    justify-content: initial;
+  }
+  .about__box{
+    text-align: center;
+    padding: 1rem 1.25rem;
+  }
+  .about__description{
+    padding: 0 4rem 0 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .skills__container{
+    grid-template-columns: repeat(2, 350px);
+    column-gap: 3rem;
+    margin-left:200px;
+  }
+
+
+  .services__container{
+    grid-template-columns: repeat(3,192px);
+    column-gap: 3rem;
+  }
+  .services__card{
+    padding: 5rem 2rem 1.5rem;
+  }
+  .work__container{
+    gap: 3rem;
+  }
+  .work__card{
+    padding: 1.25rem;
+    width:350px;
+    height:300px;
+  }
+  .work__img{
+    margin-bottom: 1rem;
+    width: 400px;
+  }
+  .work__title{
+     margin-bottom: .5rem;
+  }
+  .contact__container{
+    column-gap: 6rem;
+  }
+  .footer__social-link{
+    font-size: 1.25rem;
+    padding: .4rem;
+    border-radius: .3rem;
+  }
+  .nav__menu{
+    width:750px;
+  }
+} 
+  
