@@ -910,6 +910,24 @@ body.light-theme{
   .work__img{
     width:295px;
   }
+  .contact__info{
+    grid-template-columns: 300px;
+    justify-content: center;
+  }
+  .contact__form{
+    width:360px;
+    margin:0 auto;
+  }
 }
+@media screen and (min-width:767px) {
+  .work__container {
+    grid-template-columns: repeat(2, max-content);
+  }
 
+  .contact__container {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 3rem;
+  }
+}
 /* For large devices */
