@@ -17,12 +17,12 @@
   --sat: 66%;
   --lig: 75%;
   --second-hue: 219;
-  --first-color: hsla(192, 100%, 39%, 1);
+  --first-color: rgb(106, 241, 144);
   --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
-  --body-color: hsla(211, 100%, 2%, 1);
+  --body-color: rgb(20, 20, 20);
   --container-color: hsl(var(--second-hue), 32%, 12%);
 
   /*========== Font and typography ==========*/
@@ -85,10 +85,7 @@ body {
   transition: .4s; /* for light mode animation */
 }
 
-h1, h2, h3 {
-  color: var(--title-color);
-  font-weight: var(--font-semibold);
-}
+
 
 ul {
   list-style: none;
@@ -177,14 +174,14 @@ body.light-theme{
 }
 .light-theme .skills__content,
 .light-theme .services__card,
-.light-theme .work__card,
 .light-theme .contact__card {
   box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, .1);
 }
-.light-theme .work__card{
- background-color: #ffffff;
- background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+.light-theme .skills__content,
+.light-theme .services__card{
+  background-color: transparent;
 }
+
 
 .light-theme::-webkit-scrollbar{
   background-color: hsla(var(--second-hue), 8%, 66%);
@@ -199,7 +196,7 @@ body.light-theme{
 }
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 968px;
+  max-width: 1024px;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -242,7 +239,7 @@ body.light-theme{
   width:100%;
   z-index: var(--z-fixed);
   transition: .4s;
-  background-color: hsla(211, 100%, 2%, 1);
+  background-color: rgb(14, 15, 14);
 }
 
 .nav{
@@ -264,7 +261,7 @@ body.light-theme{
 .nav__menu{
   position:fixed;
   bottom:1rem;
-  background-color: hsla(211, 100%, 2%, 1);
+  background-color: rgb(40, 39, 38);
   width:90%;
   border-radius: .3rem;
   padding: 1rem 2.5rem;
@@ -313,18 +310,19 @@ body.light-theme{
 
 .home__greeting,
 .home__education{
-  font-size:var(--small-font-size);
+  font-size:var(--normal-font-size);
   font-weight:var(--font-medium);
+  background: -webkit-linear-gradient(rgb(22, 66, 25), rgb(13, 233, 10));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .home__greeting{
   display:block;
-  color:var(--title-color);
   margin-bottom:.25rem;
 }
 
 .home__education{
-  color:var(--text-color);
   margin-bottom: 2.5rem;
 }
 
@@ -474,7 +472,7 @@ body.light-theme{
   padding-top: 1rem;
 }
 .skills__content{
-  background-color: var(--container-color);
+  background-color: rgb(30, 31, 30);
   padding:1.5rem;
   border-radius: .25rem;
 }
@@ -519,7 +517,7 @@ body.light-theme{
 }
 
 .services__card{
-  background-color: var(--container-color);
+  background-color: rgb(30, 31, 30);
   padding: 3rem 1.5rem 1.5rem;
   border-radius: .1rem;
 }
@@ -637,8 +635,6 @@ body.light-theme{
 }
 
 .work__card{
-  background-color: #000000;
-  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
   padding: 1rem;
   border-radius: .3rem;
   
